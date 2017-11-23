@@ -16,9 +16,17 @@ switch($text){
 		$message = 'Выберите, что Вам нужно: найти бота или зарегистрировать бота.';
 		SendMessage($token,$id,$message.KeyboardMenu1());
 	break;
-	default:		
+	case 'Поиск бота':
 		$message = '';
 		SendMessage($token,$id,$message);
+	break;
+	case 'Зарегистрировать бота':
+		$message = '';
+		SendMessage($token,$id,$message);
+	break;
+	default:		
+		$message = 'Неверный запрос';
+		SendMessage($token,$id,$message.KeyboardMenu1());
 }
 
 
