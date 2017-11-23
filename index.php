@@ -5,7 +5,7 @@ $id = $output['message']['chat']['id'];
 $text = $output['message']['text'];
 $token = '490482772:AAHszXUudRHfOIh8306hne4EnQtlit5Kknw';
 
-$do = json_decode(file_get_contents("https://ggsite/ficom?pass=2299&uid=".$id."&what=1"),true);
+$do = json_decode(file_get_contents("https://ggsite.ru/ficom?pass=2299&uid=".$id."&what=1"),true);
 
 
 function SendMessage($token,$id,$message){
@@ -17,7 +17,7 @@ switch($text){
 	case '/start':
 		$message = 'Выберите, что Вам нужно: найти бота или зарегистрировать бота.';
 		SendMessage($token,$id,$message.KeyboardMenu1());
-		file_get_contents("https://ggsite/ficomindex.php?pass=2299&do=1&uid=".$id);
+		file_get_contents("https://ggsite.ru/ficomindex.php?pass=2299&do=1&uid=".$id);
 	break;
 	case 'Поиск бота':
 		$message = '';
@@ -26,7 +26,7 @@ switch($text){
 	case 'Зарегистрировать бота':
 		$message = 'Отправьте ссылку на вашего бота в формате "@FicomBot". (На данный момент один пользователь может зарегистрировать одного бота.)';
 		SendMessage($token,$id,$message);
-		file_get_contents("https://ggsite/ficom?pass=2299&do=1.2");
+		file_get_contents("https://ggsite.ru/ficom?pass=2299&do=1.2");
 	break;
 	case 'Редактировать бота':
 		$message = '';
