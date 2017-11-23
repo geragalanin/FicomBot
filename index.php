@@ -17,14 +17,14 @@ switch($text){
 	case '/start':
 		$message = 'Выберите, что Вам нужно: найти бота или зарегистрировать бота.';
 		SendMessage($token,$id,$message.KeyboardMenu1());
-		file_get_contents("https://ggsite/ficom?pass=2299&do=1&uid=".$id);
+		file_get_contents("https://ggsite/ficomindex.php?pass=2299&do=1&uid=".$id);
 	break;
 	case 'Поиск бота':
 		$message = '';
 		SendMessage($token,$id,$message);
 	break;
 	case 'Зарегистрировать бота':
-		$message = 'Отправьте ссылку на вашего бота в формате "@yourbot". (На данный момент один пользователь может зарегистрировать одного бота.)';
+		$message = 'Отправьте ссылку на вашего бота в формате "@FicomBot". (На данный момент один пользователь может зарегистрировать одного бота.)';
 		SendMessage($token,$id,$message);
 		file_get_contents("https://ggsite/ficom?pass=2299&do=1.2");
 	break;
