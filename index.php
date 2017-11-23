@@ -27,7 +27,7 @@ function KeyboardMenu1(){
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,       //кнопки 
 										  'resize_keyboard' => true,   //размер кнопок норм, если true
 										  'one_time_keyboard' => true, //убирается сама, если true
-										  'selective' => true]);
+										  'selective' => false]);
 										  
 	$reply_markup = '&reply_markup='.$keyboard.'';
 	return $reply_markup; 
