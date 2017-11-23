@@ -17,7 +17,7 @@ switch($text){
 	case '/start':
 		$message = 'Выберите, что Вам нужно: найти бота или зарегистрировать бота.';
 		SendMessage($token,$id,$message.KeyboardMenu1());
-		file_get_contents("https://ggsite.ru/ficomindex.php?pass=2299&do=1&uid=".$id);
+		file_get_contents("https://ggsite.ru/ficom/index.php?pass=2299&do=1&uid=".$id);
 	break;
 	case 'Поиск бота':
 		$message = '';
