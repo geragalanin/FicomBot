@@ -9,6 +9,6 @@ $text = $output['message']['text'];
 //$key = $_GET['start']; 
 //file_get_contents('http://ggsite.ru/ficom/index.php?id='.$id.'&text='.$text);
 
-file_get_contents("https://api.telegram.org/bot490482772:AAHszXUudRHfOIh8306hne4EnQtlit5Kknw/sendMessage?chat_id=".$id."&text=".$key);
+file_get_contents("https://api.telegram.org/bot490482772:AAHszXUudRHfOIh8306hne4EnQtlit5Kknw/sendMessage?chat_id=".$id."&text=g".$key);
 
 ?>
