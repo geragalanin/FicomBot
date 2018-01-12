@@ -8,6 +8,6 @@ if(stristr($text,"start=") === true){
 	$key = substr($text, 7);
 }
 
-else{ file_get_contents("https://api.telegram.org/bot490482772:AAHszXUudRHfOIh8306hne4EnQtlit5Kknw/sendMessage?chat_id=".$id."&text=".$key); }
+file_get_contents("https://api.telegram.org/bot490482772:AAHszXUudRHfOIh8306hne4EnQtlit5Kknw/sendMessage?chat_id=".$id."&text=".$key); 
 	
 ?>
