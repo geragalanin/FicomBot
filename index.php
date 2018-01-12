@@ -4,7 +4,7 @@ $output = json_decode(file_get_contents('php://input'),true);
 $id = $output['message']['chat']['id'];
 $text = $output['message']['text'];
 
-if(strrpos($text,"start=") === true){
+if(stripos($text,"start=") === true){
 	$key = substr($text, 7);
 }
 
